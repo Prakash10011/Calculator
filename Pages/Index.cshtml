@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Scientific Calculator</h1>
+
+    <form action="" method="POST">
+        <input type="text" placeholder="Enter Value" name="value" required>
+        <input type="text" placeholder="Enter Exponent" name="exponent" required>
+        <input type="submit" value="Calculate Exponent">
+        <p>Result of Exponentiation: @ViewData["exponentiationResult"]</p>
+    </form>
+
+    <form action="" method="POST">
+        <input type="text" placeholder="Enter Num1" name="num1" required>
+        <input type="text" placeholder="Enter Num2" name="num2" required>
+        <input type="submit" value="Add" name="add">
+        <input type="submit" value="Subtract" name="subtract">
+        <p>Result of Addition: @ViewData["additionResult"]</p>
+        <p>Result of Subtraction: @ViewData["subtractionResult"]</p>
+    </form>
+
+    <h3>Square and Cube Calculations:</h3>
+    <form action="" method="POST">
+        <input type="text" placeholder="Enter Value for Square & Cube" name="squareCubeValue" required>
+        <input type="submit" value="Calculate Square & Cube">
+    </form>
+
+    <p>Square of Value: @ViewData["squareResult"]</p>
+    <p>Cube of Value: @ViewData["cubeResult"]</p>
+</div>
